@@ -1,0 +1,108 @@
+{
+  "files.autoGuessEncoding": false,
+  "files.encoding": "utf8",
+  "sublimeTextKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "editor.formatOnPaste": true,
+  "explorer.confirmDelete": false,
+  "eslint.options": {
+    "plugins": ["html"]
+  },
+  "diffEditor.ignoreTrimWhitespace": true,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.statusBar.feedback.visible": false,
+  // "window.zoomLevel": -1,
+  "files.associations": {
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript",
+    "*.json": "json"
+    // "*.vue": "vue"
+  },
+  "minapp-vscode.disableAutoConfig": true,
+  "workbench.sideBar.location": "left",
+  "workbench.statusBar.visible": true,
+  "workbench.activityBar.visible": true,
+
+  /**yql@yitong.com.cn**/
+  "javascript.implicitProjectConfig.experimentalDecorators": false, //打开文件不覆盖
+  "search.followSymlinks": false, //关闭rg.exe进程
+  "editor.minimap.enabled": true, //关闭快速预览
+  "files.autoSave": "off", //afterDelay打开自动保存
+  "editor.lineNumbers": "on", //开启行数提示
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "editor.tabSize": 2, //制表符符号eslint
+  "editor.formatOnSave": true,
+  "javascript.autoClosingTags": true, //每次保存自动格式化
+  "eslint.autoFixOnSave": true, // 每次保存的时候将代码按eslint格式进行修复
+
+  "emmet.includeLanguages": {
+    "wxml": "html",
+    "javascript": "javascriptreact",
+    "jsx-sublime-babel-tags": "javascriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "JavaScript React": "jsx"
+  },
+  "emmet.triggerExpansionOnTab": false,
+  "prettier.eslintIntegration": true, //让prettier使用eslint的代码格式进行校验
+  "prettier.semi": false, //去掉代码结尾的分号
+  "prettier.singleQuote": true, //使用单引号替代双引号
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": false, //让函数(名)和后面的括号之间加个空格
+  "vetur.format.defaultFormatter.html": "js-beautify-html", //格式化.vue中html
+  "vetur.format.defaultFormatter.js": "vscode-typescript", //vscode-typescript 让vue中的js按编辑器自带的ts格式进行格式化
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "wrap_line_length": 120,
+      "wrap_attributes": "auto",
+      "end_with_newline": false
+      // "wrap_attributes": "force-aligned" //auto force-aligned属性强制折行对齐
+    },
+    "prettyhtml": {
+      "printWidth": 1000,
+      "singleQuote": false,
+      "wrapAttributes": false,
+      "sortAttributes": true
+    },
+    "prettier": {
+      "semi": true, //不去掉代码结尾的分号
+      "singleQuote": true
+    }
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "html",
+      "autoFix": true
+    },
+    {
+      "language": "vue",
+      "autoFix": true
+    },
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    }
+  ],
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "git.confirmSync": false,
+  "breadcrumbs.enabled": true,
+  "telemetry.enableCrashReporter": false,
+  "json.format.enable": false,
+  "javascript.preferences.quoteStyle": "single",
+  "html.format.endWithNewline": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}

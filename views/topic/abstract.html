@@ -1,0 +1,50 @@
+<div class='cell'>
+  <!-- 展示发帖用户头像 
+  <a class="user_avatar pull-left" href="/user/<%= topic.author.loginname %>">
+    <img src="<%= proxy(topic.author.avatar_url) %>" title="<%= topic.author.loginname %>" />
+  </a> -->
+
+
+
+
+
+
+
+  <div class="topic_list_item">
+    <a class='topic_title' href='/topic/<%= topic._id %>' title='<%= topic.title %>'>
+    </a>
+    <% if (topic.tab && topic.tab === 'ask') {%>
+    <div class="topic_item_first">
+      <p> <%= topic.reply_count %></p>
+      <p>回答</p>
+    </div>
+    <% } %>
+    <div class="topic_item_second">
+      <div class="topic_title_wrapper">
+        <!-- 精华置顶标签 -->
+        <%= topic.title %>
+      </div>
+      <div>
+        <span class="reply_count pull-left">
+          <span class="count_of_visits time" title='发帖时间'> <%= topic.create_at_ago() %> </span>
+          <span class="count_of_visits browse" title='点击数'> <%= topic.visit_count %>浏览量 </span>
+          <%- partial('./_top_good', {topic: topic}) %>
+          <span class="topiclist-tab"><%= topic.fulcrum %></span>
+
+        </span>
+        <!-- <% if (topic.reply && topic.reply.author) {%>
+        <span class='last_time pull-right'> <span class="last_active_time"><%= topic.create_at_ago() %></span> </span>
+        <% } %>
+        <% if (!topic.reply) {%>
+        <span class='last_time pull-right'> <span class="last_active_time"><%= topic.create_at_ago() %></span> </span>
+        <% } %> -->
+      </div>
+
+    </div>
+    <% if (topic.tab_img  ) {%>
+    <div class="topic_item_third">
+      <img src="<%= topic.tab_img %>" />
+    </div>
+    <% } %>
+  </div>
+</div>
